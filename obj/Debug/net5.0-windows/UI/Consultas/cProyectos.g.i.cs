@@ -85,7 +85,7 @@ namespace segundo_parcial.UI.Consultas {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/segundo_parcial;V1.0.0.0;component/ui/consultas/cproyectos.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/segundo_parcial;component/ui/consultas/cproyectos.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\UI\Consultas\cProyectos.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
