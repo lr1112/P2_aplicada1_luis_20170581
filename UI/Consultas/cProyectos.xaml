@@ -1,0 +1,55 @@
+﻿<Window x:Class="segundo_parcial.UI.Consultas.cProyectos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:segundo_parcial.UI.Consultas"
+        mc:Ignorable="d"
+        Title="Consulta de Proyectos" Height="500" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Filtro-->
+            <StackPanel Grid.Column="0">
+                <Label Content="Filtro:"/>
+                <ComboBox x:Name="FiltroComboBox" Width="120" HorizontalAlignment="Left">
+                    <ComboBoxItem Content="ProyectoId"/>
+                    <ComboBoxItem Content="Descripción"/>
+                    <ComboBoxItem Content="Tiempo"/>
+                </ComboBox>
+            </StackPanel>
+
+            <!--Criterio-->
+            <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                <Label Content="Criterio:"/>
+                <TextBox x:Name="CriterioTextBox" Width="260" Height="22" HorizontalAlignment="Left"/>
+            </StackPanel>
+
+            <Button x:Name="BuscarBoton" Grid.Column="2" Width="85" Height="30" Margin="5,0,0,0" VerticalAlignment="Bottom" Click="BuscarBoton_Click" BorderBrush="Black" Background="#FF02A5ED">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="18" Height="18" Source="/Imagenes/search.png"/>
+                    <Label Content="Buscar" Foreground="Black" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+
+        <DataGrid x:Name="ProyectosDataGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,5,0,0" RowHeaderWidth="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ProyectoId" Width=".4*" Binding="{Binding ProyectoId}"/>
+                <DataGridTextColumn Header="Fecha" Width=".65*" Binding="{Binding Fecha}"/>
+                <DataGridTextColumn Header="Descripción" Width="*" Binding="{Binding Descripcion}"/>
+                <DataGridTextColumn Header="Tiempo" Width=".3*" Binding="{Binding TiempoTotal}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
