@@ -27,8 +27,9 @@
 
             <Button x:Name="BuscarBoton" Width="85" Height="30" Margin="10,0,0,0" Click="BuscarBoton_Click" BorderBrush="Black" Background="#FF02A5ED">
                 <StackPanel Orientation="Horizontal">
-                    <Image Width="18" Height="18" Source="/Imagenes/search.png"/>
-                    <Label Content="Buscar" Foreground="Black" FontWeight="Bold"/>
+                    <Image Width="18" Height="18" Source="\Imagenes\search.png"/>
+                    
+                        <Label Content="Buscar" Foreground="Black" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
         </StackPanel>
