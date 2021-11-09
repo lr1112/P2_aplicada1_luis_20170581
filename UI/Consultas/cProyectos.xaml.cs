@@ -28,7 +28,37 @@ namespace segundo_parcial.UI.Consultas
 
         private void BuscarBoton_Click(object sender, RoutedEventArgs e)
         {
-           
+            var lista = new List<Proyectos>();
+            string criterio = CriterioTextBox.Text;
+
+            if (criterio.Length != 0)
+            {
+                switch (FiltroComboBox.SelectedIndex)
+                {
+                    case 0:
+                        lista = ProyectosBLL.ObtenerLista(p => p.ProyectoId == Utilities.ToInt(criterio));
+                        break;
+                    case 1:
+                        lista = ProyectosBLL.ObtenerLista(p => p.Descripcion.ToLower().Contains(criterio.ToLower()));
+                        break;
+                    case 2:
+                        lista = ProyectosBLL.ObtenerLista(p => p.TiempoTotal == Utilities.ToDouble(criterio));
+                        break;
+
+                }
+            }
+            else
+            {
+                lista = ProyectosBLL.ObtenerLista(p => true);
+            }
+
+            if (lista.Count == 0)
+            {
+                MessageBox.Show("No se encontró ningún proyecto", "Consulta de proyectos");
+            }
+
+            ProyectosDataGrid.ItemsSource = null;
+            ProyectosDataGrid.ItemsSource = lista;
         }
     }
     

@@ -27,7 +27,7 @@
 
             <Button x:Name="BuscarBoton" Width="85" Height="30" Margin="10,0,0,0" Click="BuscarBoton_Click" BorderBrush="Black" Background="#FF02A5ED">
                 <StackPanel Orientation="Horizontal">
-                    <Image Width="18" Height="18" Source="\Imagenes\search.png"/>
+                    <Image Source="\Imagenes\buscar.png"></Image>
                     
                         <Label Content="Buscar" Foreground="Black" FontWeight="Bold"/>
                 </StackPanel>
@@ -83,7 +83,7 @@
                     <!-- Agregar botón -->
                     <Button x:Name="AgregarBoton" Grid.Column="3" Width="85" Height="28" HorizontalAlignment="Right" Click="AgregarBoton_Click" Background="#FF18EB39" BorderBrush="Black">
                         <StackPanel Orientation="Horizontal">
-                            <Image Width="18" Height="18" Source="/Imagenes/add.png"/>
+                            <Image Width="18" Height="18" Source="\Imagenes\agregar.png"></Image>
                             <Label Content="Agregar" Foreground="Black" FontWeight="Bold"/>
                         </StackPanel>
                     </Button>
@@ -102,7 +102,7 @@
                 <!-- Remover botón -->
                 <Button x:Name="RemoverBoton" Grid.Row="2" Width="85" Height="28" HorizontalAlignment="Right" Click="RemoverBoton_Click" Background="#FFF02121" BorderBrush="Black">
                     <StackPanel Orientation="Horizontal">
-                        <Image Width="18" Height="18" Source="/Imagenes/cancel.png"/>
+                        <Image Source="\Imagenes\cancelar.png"></Image>
                         <Label Content="Remover" Foreground="Black" FontWeight="Bold"/>
                     </StackPanel>
                 </Button>
@@ -118,19 +118,19 @@
         <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30">
             <Button x:Name="NuevoBoton" Width="90" Margin="5,0,0,0" Background="#FFFCEF32" BorderBrush="Black" Click="NuevoBoton_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Width="18" Height="18" Source="/Imagenes/new.png"/>
+                    <Image Width="18" Height="18" Source="\Imagenes\nuevo.png"></Image>
                     <Label Content="Nuevo" Foreground="Black" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
             <Button x:Name="GuardarBoton" Width="90" Margin="20,0,0,0" Background="#FF18EB39" BorderBrush="Black" Click="GuardarBoton_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Width="18" Height="18" Source="/Imagenes/save.png"/>
+                    <Image Source="\Imagenes\guardar.png"></Image>
                     <Label Content="Guardar" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
             <Button x:Name="EliminarBoton" Width="90" Margin="20,0,0,0" Background="#FFF02121" BorderBrush="Black" Click="EliminarBoton_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Width="18" Height="18" Source="/Imagenes/delete.png"/>
+                    <Image Width="18" Height="18" Source="\Imagenes\eliminar.png"></Image>
                     <Label Content="Eliminar" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
